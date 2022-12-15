@@ -1,2 +1,6 @@
 typescript/convert/node_modules
-typescript/convert/dist
+typescript/convert/node_modules
+jasmine-testing/configuration/node_modules
+jasmine-testing/configuration/dist
+jasmine-testing/exercise/pass-test/node_modules
+jasmine-testing/exercise/pass-test/dist

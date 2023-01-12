@@ -1,6 +1,6 @@
 import numbers from '../../utilities/numbers';
 
-describe('Tests for number utilities', () => {
+describe('Tests for number controllers', () => {
 
     describe('function sum gets sum of two numbers', () => {
         it('should be a sum greater than 10', () => {

@@ -1,6 +1,6 @@
 import arrays from '../../utilities/arrays';
 
-describe('Tests for array utilities', () => {
+describe('Tests for array controllers', () => {
     const numArr = [3, 4, 5, 6];
     const wordArr = ['cat', 'dog', 'rabbit', 'bird'];
 
@@ -13,11 +13,11 @@ describe('Tests for array utilities', () => {
         });
     })
 
-    describe('function concatArr concatinates 2 arrays', () => {
-        it('should concatinate 2 arrays to not equal the first', () => {
+    describe('function concatArr concatenates 2 arrays', () => {
+        it('should concatenate 2 arrays to not equal the first', () => {
             expect(arrays.concatArr(numArr, wordArr)).not.toEqual(numArr);
         });
-        it('should concatinate 2 arrays to not equal the second', () => {
+        it('should concatenate 2 arrays to not equal the second', () => {
             expect(arrays.concatArr(numArr, wordArr)).not.toEqual(wordArr);
         });
     })

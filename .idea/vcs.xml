@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mage-preccessing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/postgres/creating-api-with-postgresql" vcs="Git" />
   </component>
 </project>

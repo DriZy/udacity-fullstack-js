@@ -6,12 +6,23 @@ exports.__esModule = true;
 var dotenv_1 = __importDefault(require("dotenv"));
 var pg_1 = require("pg");
 dotenv_1["default"].config();
-var _a = process.env, DATABASE_HOST = _a.DATABASE_HOST, DATABASE_NAME = _a.DATABASE_NAME, DATABASE_USER = _a.DATABASE_USER, DATABASE_PASSWORD = _a.DATABASE_PASSWORD;
-var client = new pg_1.Pool({
-    host: DATABASE_HOST,
-    port: 5432,
-    database: DATABASE_NAME,
-    user: DATABASE_USER,
-    password: DATABASE_PASSWORD
-});
+var _a = process.env, POSTGRES_HOST = _a.POSTGRES_HOST, POSTGRES_DB = _a.POSTGRES_DB, POSTGRES_USER = _a.POSTGRES_USER, POSTGRES_PASSWORD = _a.POSTGRES_PASSWORD, POSTGRES_TEST_DB = _a.POSTGRES_TEST_DB, ENV = _a.ENV;
+var client;
+console.log(ENV);
+if (ENV === 'test') {
+    client = new pg_1.Pool({
+        host: POSTGRES_HOST,
+        database: POSTGRES_TEST_DB,
+        user: POSTGRES_USER,
+        password: POSTGRES_PASSWORD
+    });
+}
+if (ENV === 'dev') {
+    client = new pg_1.Pool({
+        host: POSTGRES_HOST,
+        database: POSTGRES_DB,
+        user: POSTGRES_USER,
+        password: POSTGRES_PASSWORD
+    });
+}
 exports["default"] = client;

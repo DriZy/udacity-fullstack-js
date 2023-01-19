@@ -1,3 +1,4 @@
+// @ts-ignore
 import Client from '../database'
 
 export type Book = {
@@ -41,7 +42,7 @@ export class BookStore {
         }
     }
 
-    async create(b: Book): Promise<Book> {
+    async create(b: { summary: string; author: string; totalPages: number; title: string }): Promise<Book> {
         try {
             const sql = 'INSERT INTO books (title, author, total_pages, summary) VALUES($1, $2, $3, $4) RETURNING *'
             // @ts-ignore

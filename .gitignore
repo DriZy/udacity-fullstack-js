@@ -24,4 +24,16 @@ express/csv/dist
 
 postgres/creating-api-with-postgressql/node_modules
 postgres/creating-api-with-postgressql/.env
-express/creating-api-with-postgressql/dist
+postgres/creating-api-with-postgressql/dist
+
+postgres/api-with-express/node_modules
+postgres/api-with-express/.env
+postgres/api-with-express/dist
+
+postgres/node-api-auth/node_modules
+postgres/node-api-auth/.env
+postgres/node-api-auth/dist
+
+postgres/node-postgres-api/node_modules
+postgres/node-postgres-api/.env
+postgres/node-postgres-api/dist
